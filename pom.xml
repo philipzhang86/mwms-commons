@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.jmalltech</groupId>
-    <artifactId>mwms-commons-depedency</artifactId>
+    <artifactId>mwms-commons-dependency</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -30,6 +30,9 @@
         <redission.version>3.15.6</redission.version>
         <redission-springboot.version>3.17.7</redission-springboot.version>
         <hutool-all.version>5.8.25</hutool-all.version>
+        <snakeyaml.version>2.0</snakeyaml.version>
+        <eureka.server.version>4.0.4</eureka.server.version>
+        <eureka.client.version>4.0.4</eureka.client.version>
     </properties>
 
 
@@ -48,6 +51,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
         <dependency>
@@ -159,6 +167,19 @@
                 <artifactId>commons-kafka</artifactId>
                 <version>1.0.0.SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>${eureka.client.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>${eureka.server.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
