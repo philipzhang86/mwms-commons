@@ -34,6 +34,7 @@
         <eureka.server.version>4.0.4</eureka.server.version>
         <eureka.client.version>4.0.4</eureka.client.version>
         <commons-kafka.version>1.0.0.SNAPSHOT</commons-kafka.version>
+        <jwt.version>3.18.3</jwt.version>
     </properties>
 
 
@@ -105,6 +106,12 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
                 <version>${eureka.server.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${jwt.version}</version>
             </dependency>
 
         </dependencies>
